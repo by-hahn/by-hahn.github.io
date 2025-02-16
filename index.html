@@ -3,9 +3,11 @@
 <head>
     <link rel="stylesheet" href="/css/splash_page/intro.css">
     <link rel="stylesheet" href="/css/splash_page/main.css">
+    <link rel="stylesheet" href="/css/splash_page/main_sidebar.css">
 </head>
     
 <body>
+    <!-- 초반 intro 애니메이션 -->
     <div class="intro">
         <div class="fade-IO" style="animation-delay: 0.5s">안녕하세요!</div>
         <div class="fade-IO" style="animation-delay: 3.5s; animation-duration: 4s" id="loading-text" >로딩중</div> <!-- 얘만 animation-duration으로 별개 시간 조정 가능 -->
@@ -13,13 +15,31 @@
         <div class="fade-IO" style="animation-delay: 11s, 13s; animation-name: fadeInOut, fadeInOutScale; animation-duration: 2.7s, 2.5s">하지만 곧 완성됩니다!😆</div>
     </div>
 
-    
+    <!-- intro 이후 main -->
     <div class="main">
         <div class="fade-I" style="animation-delay: 16s">
             <h1 style="font-size: 2rem; font-weight: 100">그래도 궁금하다면? 구경해보세요!</h1>
         </div>
+    </div>
+    <div class="main_sidebar">
         <div class="fade-I" style="animation-delay: 17s">
-            <h1 style="font-size: 2rem; font-weight: 100">그래도 궁금하다면? 구경해보세요!</h1>
+            <div class="logo-container">
+                <div class="logo-wrapper">
+                    <a href="https://github.com/by-hahn">
+                        <img src="/images/logo/github-mark.png">
+                    </a>
+                </div>
+                <div class="logo-wrapper">
+                    <a href="https://www.linkedin.com/in/byoungyoon-hahn/">
+                        <img src="/images/logo/In-Blue-128@2x.png">
+                    </a>
+                </div>
+                <div class="logo-wrapper">
+                    <a href="https://www.instagram.com/by_hahn/">
+                        <img src="/images/logo/Instagram_Glyph_Gradient.png">
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
     
