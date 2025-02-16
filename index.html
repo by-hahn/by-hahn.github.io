@@ -22,7 +22,7 @@
 
         @keyframes fadeInOutScale {
             0% { transform: scale(1) translateY(0); }
-            100% { transform: scale(0.2) translateY(-200px); }
+            100% { transform: scale(0.2) translateY(-400px); }
         }
 
         .container {
@@ -31,14 +31,12 @@
             align-items: center;
             height: 100vh;
             font-size: 2rem;
-            font-family: Arial, sans-serif;
+            font-weight: 100;
         }
 
         /**/
         #loading-text {
-          font-size: 24px;
-          color: #333;
-          min-width: 100px;
+          min-width: 150px;
           display: inline-block;
           text-align: left;
         }
@@ -55,6 +53,12 @@
           100% { content: '.'; }
         }
 
+        @font-face {
+            font-family: 'Pretendard';
+            src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/PretendardVariable.woff2') format('woff2');
+            font-weight: 100 900; /* 100부터 900까지 지원 */
+            font-style: normal;
+        }
 
         
     </style>
@@ -64,7 +68,7 @@
         <div class="fade-text" style="animation-delay: 0.5s">안녕하세요!</div>
         <div class="fade-text" style="animation-delay: 3.5s; animation-duration: 4s" id="loading-text" >로딩중</div> <!-- 얘만 animation-duration으로 별개 시간 조정 가능 -->
         <div class="fade-text" style="animation-delay: 8s">사실 아직 덜 만들었어요.😂</div>
-        <div class="fade-text" style="animation-delay: 11s, 13s; animation-name: fadeInOut, fadeInOutScale; animation-duration: 2.5s, 2.5s">하지만 곧 완성됩니다!😆</div>
+        <div class="fade-text" style="animation-delay: 11s, 13s; animation-name: fadeInOut, fadeInOutScale; animation-duration: 2.7s, 2.5s">하지만 곧 완성됩니다!😆</div>
     </div>
     
 </body>
