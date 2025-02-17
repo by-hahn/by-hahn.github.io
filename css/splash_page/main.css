@@ -27,3 +27,27 @@
     100% { opacity: 1; }
 }
 
+
+/* 바로가기 버튼 */
+.button {
+    background: linear-gradient(to right, rgba(220, 220, 220, 0.8) 50%, rgba(255, 236, 92, 1) 50%);
+    /* 배경만 따로 투명도 조절하기 위해서 rgba 사용 */
+    background-size: 200% 100%;
+    /* 실제 버튼 크기보다 가로 길이가 두 배(hover시 가로 평행 이동) */
+    background-position: right;
+    color: black;
+    border: 2px solid #04AA6D;
+    padding: 16px 32px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition: background-position 0.4s ease-in-out, color 0.4s ease-in-out;
+}
+
+
+
+.button:hover {
+    background-position: left;
+    color: white;
+}
