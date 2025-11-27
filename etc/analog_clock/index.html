@@ -1,22 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Transparent SVG Clock</title>
+  <title>Transparent Responsive SVG Clock</title>
 
-  <!-- 배경 투명 -->
   <style>
     html, body {
       margin: 0;
       padding: 0;
-      background: transparent !important;
+      background: transparent;
       overflow: hidden;
     }
 
     .clock-wrapper {
-      width: 240px;
-      height: 240px;
+      width: 80%;
+      aspect-ratio: 1 / 1;
+      margin: 0 auto;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -24,6 +24,8 @@
     }
 
     svg {
+      width: 100%;
+      height: 100%;
       background: transparent;
       display: block;
     }
@@ -34,19 +36,15 @@
       stroke-width: 5;
     }
 
+    .tick-major {
+      stroke: #111827;
+      stroke-width: 2;
+    }
+
     .number {
       fill: #374151;
       font-family: monospace;
       font-size: 1.5rem;
-    }
-
-    .tick {
-      stroke: #4b5563;
-    }
-
-    .tick-major {
-      stroke: #111827;
-      stroke-width: 2;
     }
 
     .hand-hour {
@@ -78,7 +76,6 @@
       <g transform="translate(120,120)">
         <circle r="117" class="clock-face"></circle>
 
-        <!-- 12개 메이저 눈금 -->
         <g class="tick-major">
           <line x1="100" y1="0" x2="110" y2="0"></line>
           <line x1="86.6" y1="50" x2="95.26" y2="55"></line>
@@ -94,7 +91,6 @@
           <line x1="86.6" y1="-50" x2="95.26" y2="-55"></line>
         </g>
 
-        <!-- 숫자 -->
         <g class="number">
           <text x="0" y="-85" text-anchor="middle" dominant-baseline="central">12</text>
           <text x="42.5" y="-73.61" text-anchor="middle" dominant-baseline="central">1</text>
@@ -110,13 +106,14 @@
           <text x="-42.5" y="-73.61" text-anchor="middle" dominant-baseline="central">11</text>
         </g>
 
-        <!-- 바늘 -->
         <g id="hour-hand">
           <line class="hand-hour" x1="0" y1="15" x2="0" y2="-60"></line>
         </g>
+
         <g id="minute-hand">
           <line class="hand-minute" x1="0" y1="20" x2="0" y2="-80"></line>
         </g>
+
         <g id="second-hand">
           <line class="hand-second" x1="0" y1="30" x2="0" y2="-95"></line>
         </g>
@@ -129,19 +126,20 @@
   <script>
     function updateClock() {
       const now = new Date();
-      const seconds = now.getSeconds();
-      const minutes = now.getMinutes();
-      const hours = now.getHours();
+      const s = now.getSeconds();
+      const m = now.getMinutes();
+      const h = now.getHours();
 
-      // 각도 계산
-      const secondAngle = seconds * 6;
-      const minuteAngle = minutes * 6 + seconds * 0.1;
-      const hourAngle = (hours % 12) * 30 + minutes * 0.5;
+      const secondAngle = s * 6;
+      const minuteAngle = m * 6 + s * 0.1;
+      const hourAngle = (h % 12) * 30 + m * 0.5;
 
       document.getElementById("second-hand")
         .setAttribute("transform", `rotate(${secondAngle})`);
+
       document.getElementById("minute-hand")
         .setAttribute("transform", `rotate(${minuteAngle})`);
+
       document.getElementById("hour-hand")
         .setAttribute("transform", `rotate(${hourAngle})`);
     }
