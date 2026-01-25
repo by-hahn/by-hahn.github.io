@@ -15,6 +15,7 @@
     left: 0;
     width: 100%;
     height: 100%;
+    z-index: 5;
 }
 
 
@@ -39,12 +40,13 @@ button {
     background-position: right;
     color: black;
     border: 2px solid #04AA6D;
-    padding: 16px 32px;
+    padding: 20px 40px;
     text-align: center;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 20px;
     margin: 4px 2px;
     transition: background-position 0.4s ease-in-out, color 0.4s ease-in-out;
+    border-radius: 8px;
 }
 
 
