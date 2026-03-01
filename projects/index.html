@@ -1,7 +1,112 @@
 <!DOCTYPE html>
-<html>
-<body>
-<h1>Projects</h1>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore HAHN's project portfolio.">
+    <title>Projects - HAHN | AI Researcher & Software Engineer</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/DarkVeil.css">
+</head>
+
+<body>
+
+    <header class="header-fixed">
+        <div class="container">
+            <h1 class="logo">
+                <a href="../">BY-Hahn</a>
+            </h1>
+
+            <button class="mobile-menu-btn" aria-label="Open menu">
+                ☰
+            </button>
+
+            <nav class="main-nav" aria-label="Main menu">
+                <ul>
+                    <li><a href="../about">About</a></li>
+                    <li><a href="../career">Career</a></li>
+                    <li><a href="./">Projects</a></li>
+                    <li><a href="https://blog.by-hahn.com" target="_blank">Blog</a></li>
+                    <li><a href="../contact">Contact</a></li>
+                    <li>
+                        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+                            🌙
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+    <main>
+
+        <section class="section-hero">
+            <div class="container">
+                <h1 class="section-title">Featured Projects</h1>
+                <p class="section-subtitle">A diverse range of project experiences</p>
+            </div>
+            <div class="scroll-down" aria-label="Scroll down">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </section>
+
+        <section class="section-projects">
+            <div class="container">
+                <div id="projects-container" class="project-grid">
+                    <!-- Projects will be loaded here by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <h2 class="footer-title">Let's engineer the future, together.</h2>
+                <address class="contact-info">
+                    <p>Email: <a href="mailto:seehahn@knu.ac.kr">seehahn@knu.ac.kr</a></p>
+                </address>
+                <div class="social-links">
+                    <a href="https://github.com/by-hahn" target="_blank" aria-label="GitHub Profile">GitHub</a>
+                    <a href="https://www.linkedin.com/in/byoungyoon-hahn/" target="_blank"
+                        aria-label="LinkedIn Profile">LinkedIn</a>
+                    <a href="https://www.instagram.com/by_hahn/" target="_blank"
+                        aria-label="Instagram Profile">Instagram</a>
+                </div>
+                <p class="copyright">
+                    © 2026 by-hahn. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- js-yaml Library for YAML parsing -->
+    <script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
+    <script src="../js/ProjectLoader.js"></script>
+    <script src="../js/DarkVeil.js"></script>
+    <script src="../js/script.js"></script>
+    
+    <!-- Projects Page Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', async () => {
+            try {
+                console.log('Loading projects for projects page...');
+                const loader = await initProjectLoader('./projects.yaml');
+                console.log('Projects loaded:', loader.projects.length);
+                console.log('Rendering all projects...');
+                loader.renderProjects('projects-container', true);  // true = detailed version
+                console.log('Projects rendered successfully');
+            } catch (error) {
+                console.error('Failed to load projects:', error);
+                document.getElementById('projects-container').innerHTML = '<p>Unable to load projects.</p>';
+            }
+        });
+    </script>
 </body>
+
 </html>

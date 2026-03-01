@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Get in touch with HAHN.">
+    <title>Contact - HAHN | AI Researcher & Software Engineer</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/DarkVeil.css">
+    <link rel="stylesheet" href="../css/ProfileCard.css">
+</head>
+
+<body>
+
+    <header class="header-fixed">
+        <div class="container">
+            <h1 class="logo">
+                <a href="../">BY-Hahn</a>
+            </h1>
+
+            <button class="mobile-menu-btn" aria-label="Open menu">
+                ☰
+            </button>
+
+            <nav class="main-nav" aria-label="Main menu">
+                <ul>
+                    <li><a href="../about">About</a></li>
+                    <li><a href="../career">Career</a></li>
+                    <li><a href="../projects">Projects</a></li>
+                    <li><a href="https://blog.by-hahn.com" target="_blank">Blog</a></li>
+                    <li><a href="./">Contact</a></li>
+                    <li>
+                        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+                            🌙
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+    <main>
+
+        <section class="section-hero">
+            <div class="container">
+                <h1 class="section-title">Get In Touch</h1>
+                <p class="section-subtitle">Let's build something together</p>
+            </div>
+            <div class="scroll-down" aria-label="Scroll down">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </section>
+
+        <section class="section-contact">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-info-section">
+                        <h2>Ready to Connect</h2>
+                        
+                        <div class="contact-method">
+                            <h3>📧 Email</h3>
+                            <p>
+                                <a href="mailto:seehahn@knu.ac.kr">seehahn@knu.ac.kr</a>
+                            </p>
+                            <p class="contact-desc">Feel free to reach out for project proposals, collaboration requests, technical questions, or anything else.</p>
+                        </div>
+
+                        <div class="contact-method">
+                            <h3>💼 LinkedIn</h3>
+                            <p>
+                                <a href="https://www.linkedin.com/in/byoungyoon-hahn/" target="_blank">
+                                    linkedin.com/in/byoungyoon-hahn
+                                </a>
+                            </p>
+                            <p class="contact-desc">Professional networking and career information</p>
+                        </div>
+
+                        <div class="contact-method">
+                            <h3>🐙 GitHub</h3>
+                            <p>
+                                <a href="https://github.com/by-hahn" target="_blank">
+                                    github.com/by-hahn
+                                </a>
+                            </p>
+                            <p class="contact-desc">Project code and contributions</p>
+                        </div>
+
+                        <div class="contact-method">
+                            <h3>📱 Instagram</h3>
+                            <p>
+                                <a href="https://www.instagram.com/by_hahn/" target="_blank">
+                                    @by_hahn
+                                </a>
+                            </p>
+                            <p class="contact-desc">Sharing personal moments and thoughts</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-card-section">
+                        <div id="profile-card-container"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <h2 class="footer-title">Let's engineer the future, together.</h2>
+                <address class="contact-info">
+                    <p>Email: <a href="mailto:seehahn@knu.ac.kr">seehahn@knu.ac.kr</a></p>
+                </address>
+                <div class="social-links">
+                    <a href="https://github.com/by-hahn" target="_blank" aria-label="GitHub Profile">GitHub</a>
+                    <a href="https://www.linkedin.com/in/byoungyoon-hahn/" target="_blank"
+                        aria-label="LinkedIn Profile">LinkedIn</a>
+                    <a href="https://www.instagram.com/by_hahn/" target="_blank"
+                        aria-label="Instagram Profile">Instagram</a>
+                </div>
+                <p class="copyright">
+                    © 2026 by-hahn. All rights reserved.
+                </p>
+            </div>
+        </div>
+    <script>
+        // Initialize Profile Card
+        document.addEventListener('DOMContentLoaded', function() {
+            const profileCard = new ProfileCard({
+                avatarUrl: '../images/profilecard_1.jpg',
+                hoverImageUrl: '../images/profilecard_2.jpg',
+                miniavatarUrl: '../images/profile.jpg',
+                name: 'HAHN',
+                title: 'AI Engineer & Developer',
+                handle: 'by-hahn',
+                status: 'Available',
+                contactText: 'Get in Touch',
+                showUserInfo: true,
+                enableTilt: true,
+                enableMobileTilt: true,
+                behindGlowEnabled: true,
+                behindGlowColor: 'hsla(255, 100%, 70%, 0.6)',
+                customInnerGradient: 'linear-gradient(145deg,hsla(255, 40%, 45%, 0.55) 0%,hsla(177, 60%, 70%, 0.27) 100%)',
+                onContactClick: function() {
+                    window.location.href = 'mailto:seehahn@knu.ac.kr';
+                }
+            });
+            
+            profileCard.render('profile-card-container');
+        });
+    </script>
+    </footer>
+
+    <script src="../js/ProfileCard.js"></script>
+    <script src="../js/DarkVeil.js"></script>
+    <script src="../js/script.js"></script>
+</body>
+
+</html>

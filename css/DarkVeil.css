@@ -1,0 +1,6 @@
+.darkveil-canvas {
+  width: 100%;
+  height: calc(100% + 70px) !important;
+  display: block;
+  
+}

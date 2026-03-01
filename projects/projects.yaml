@@ -1,0 +1,124 @@
+projects:
+  - id: 1
+    name: "AI Image Classifier"
+    date: "2025"
+    category: "Personal Project"
+    description: "A web service that classifies user-uploaded images using CNN models. Achieved over 95% accuracy by fine-tuning a ResNet50-based model."
+    image: "https://dummyimage.com/500x800/000/fff"
+    tags:
+      - "AI"
+      - "PyTorch"
+      - "React"
+      - "Flask"
+      - "Machine Learning"
+    features:
+      - "Real-time image classification"
+      - "Classification confidence score display"
+      - "Usage history storage and analysis"
+    links:
+      demo: "#"
+      github: "#"
+
+  - id: 2
+    name: "Portfolio Website v2"
+    date: "2026"
+    category: "Personal Project"
+    description: "A personal portfolio site with responsive design and semantic markup. Features dark mode, smooth scrolling, and interactive animations."
+    image: "https://dummyimage.com/600x400/000/fff"
+    tags:
+      - "Frontend"
+      - "HTML/CSS"
+      - "JavaScript"
+      - "Responsive Design"
+      - "Web Design"
+    features:
+      - "Dark/Light mode toggle"
+      - "Single-page & multi-page architecture"
+      - "Mobile responsive design"
+      - "SEO optimization"
+    links:
+      demo: "../"
+      github: "https://github.com/by-hahn/portfolio"
+
+  - id: 3
+    name: "AI Chatbot Service"
+    date: "2025"
+    category: "Team Project"
+    description: "A chatbot service powered by a Transformer-based NLP model. Designed to progressively improve performance by learning from user conversations."
+    image: "https://via.placeholder.com/600x400?text=AI+Chatbot"
+    tags:
+      - "AI"
+      - "NLP"
+      - "Python"
+      - "Flask"
+      - "React"
+      - "Machine Learning"
+    features:
+      - "Real-time text-based conversation"
+      - "Sentiment analysis and response optimization"
+      - "Conversation history storage and analysis"
+    links:
+      demo: "#"
+      github: "#"
+      
+  - id: 4
+    name: "test4"
+    date: "2025"
+    category: "Personal Project"
+    description: "A web service that classifies user-uploaded images using CNN models. Achieved over 95% accuracy by fine-tuning a ResNet50-based model."
+    image: "https://via.placeholder.com/600x400?text=AI+Image+Classifier"
+    tags:
+      - "AI"
+      - "PyTorch"
+      - "React"
+      - "Flask"
+      - "Machine Learning"
+    features:
+      - "Real-time image classification"
+      - "Classification confidence score display"
+      - "Usage history storage and analysis"
+    links:
+      demo: "#"
+      github: "#"
+
+  - id: 5
+    name: "test5"
+    date: "2026"
+    category: "Personal Project"
+    description: "A personal portfolio site with responsive design and semantic markup. Features dark mode, smooth scrolling, and interactive animations."
+    image: "https://via.placeholder.com/600x400?text=Portfolio+v2"
+    tags:
+      - "Frontend"
+      - "HTML/CSS"
+      - "JavaScript"
+      - "Responsive Design"
+      - "Web Design"
+    features:
+      - "Dark/Light mode toggle"
+      - "Single-page & multi-page architecture"
+      - "Mobile responsive design"
+      - "SEO optimization"
+    links:
+      demo: "../"
+      github: "https://github.com/by-hahn/portfolio"
+
+  - id: 6
+    name: "test6"
+    date: "2025"
+    category: "Team Project"
+    description: "A chatbot service powered by a Transformer-based NLP model. Designed to progressively improve performance by learning from user conversations."
+    image: "https://via.placeholder.com/600x400?text=AI+Chatbot"
+    tags:
+      - "AI"
+      - "NLP"
+      - "Python"
+      - "Flask"
+      - "React"
+      - "Machine Learning"
+    features:
+      - "Real-time text-based conversation"
+      - "Sentiment analysis and response optimization"
+      - "Conversation history storage and analysis"
+    links:
+      demo: "#"
+      github: "#"
