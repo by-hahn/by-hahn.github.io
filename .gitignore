@@ -1,1 +1,33 @@
 .ignore/
+
+# OS Files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# Environment Variables
+.env
+.env.local
+.env.*.local
+
+# IDE / Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+logs/
+
+# Dependencies (in case of a Node.js project)
+node_modules/
+
+# Build outputs
+dist/
+build/
+
+# Sensitive documents
+*.pdf
